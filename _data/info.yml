@@ -1,0 +1,41 @@
+# Event name
+name: Computer Vision Workshop at IP Paris
+
+# Event date, in free-text format
+date: 🗓️ 14 January 2025 (9:30 - 17:00)
+
+# Event location
+location: 📍 Laboratoire d’Informatique de l’École polytechnique (LIX)
+
+# Event description; short is for e.g. Facebook shared links, long appears on the home page.
+description_short: Workshop organised by Computer Vision labs from IP Paris.
+description_long: |-
+  Welcome to the first **Computer Vision Workshop at IP Paris**,
+  a collaborative event bringing together experts, students, and professionals in the field of computer vision.
+  
+  Hosted at LIX, IP Paris, this workshop aims to explore the latest research breakthroughs, share insights,
+  and foster discussions among participants.
+  
+  See you there!
+
+
+
+# Contact email. Use a bot-defeating format, otherwise you'll get spammed.
+email: info at example dot org
+
+# Social networks. Twitter is optional, but you really should have a Facebook page.
+#facebook: ???
+#twitter: ???
+
+# Accent color of the website
+color: '#6497b1'
+
+# Font used by the website.
+# To use a custom font, see the ReadMe file.
+# If using a custom font, this value will be used as fallback.
+font: Courier, monospace
+
+# Links to past editions
+#past_editions:
+#  2010: http://2010.example.org
+#  2000: http://2000.example.org

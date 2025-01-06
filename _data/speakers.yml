@@ -1,0 +1,16 @@
+people:
+  - first: Alice
+    last: Example
+    link: http://example.org
+  
+  - first: Bob
+    last: Example
+    link: http://example.org
+
+  - first: Carol
+    last: Example
+    link: http://example.org
+
+  - first: Daniel
+    last: Example
+    link: http://example.org
