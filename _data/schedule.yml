@@ -2,3 +2,10 @@
 # Don't forget quotes around hours, otherwise the colons will mess stuff up.
 # Use an empty string ('') for the day names if you do not want headers.
 
+'':
+  '09:30-09:45': Welcome
+  '09:45-10:45': Presentations Session 1 (details soon)
+  '10:45-12:00': Poster Session 1
+  '12:00-14:00': Lunch Break
+  '14:00-15:00': Presentations Session 2 (details soon)
+  '15:30-17:00': Poster Session 2
