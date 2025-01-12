@@ -68,6 +68,68 @@ layout: default
     </div>
   </section>
 {% endif %}
+</section>
+{% if site.data.schedule %}
+  <section id="speaker_schedule">
+    <h1>Speaker Schedule</h1>
+    <h2>Morning</h2>
+    <div class="items-container">
+      {% for part in site.data.morning_speaker_schedule %}
+        <div class="item-large">
+          <table>
+            {% if part[0] != '' %}
+            <tr>
+              <th colspan="3">
+                <h2>{{ part[0] }}</h2>
+              </th>
+            </tr>
+            {% endif %}
+            <tr>
+              <th>Time</th>
+              <th>Name</th>
+              <th>Title</th>
+            </tr>
+            {% for item in part[1] %}
+            <tr>
+              {% for field in item %}
+                <td>{{ field }}</td>
+              {% endfor %}
+            </tr>
+            {% endfor %}
+          </table>
+        </div>
+      {% endfor %}
+    </div>
+    <h2>Afternoon</h2>
+    <div class="items-container">
+      {% for part in site.data.afternoon_speaker_schedule %}
+        <div class="item-large">
+          <table>
+            {% if part[0] != '' %}
+            <tr>
+              <th colspan="3">
+                <h2>{{ part[0] }}</h2>
+              </th>
+            </tr>
+            {% endif %}
+            <tr>
+              <th>Time</th>
+              <th>Name</th>
+              <th>Title</th>
+            </tr>
+            {% for item in part[1] %}
+            <tr>
+              {% for field in item %}
+                <td>{{ field }}</td>
+              {% endfor %}
+            </tr>
+            {% endfor %}
+          </table>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}
 <!--
 TODO re-add
 <section>
