@@ -42,94 +42,103 @@ layout: default
     {% endif %}
   </div>
 </section>
-{% if site.data.schedule %}
-  <section id="schedule">
-    <h1>Tentative Schedule</h1>
-    <div class="items-container">
-      {% for part in site.data.schedule %}
-        <div class="item-large">
-          <table>
-            {% if part[0] != '' %}
+<section id="schedule">
+  <h1>Schedule</h1>
+  <div class="items-container">
+    {% for part in site.data.schedule %}
+      <div class="item-large">
+        <table>
+          <thead>
             <tr>
-              <th colspan="2">
-                <h2>{{ part[0] }}</h2>
-              </th>
+                <th><b>Time</b></th>
+                <th><b>Speaker</b></th>
+                <th style="width: 50%;"><b>Title</b></th>
             </tr>
-            {% endif %}
-            {% for item in part[1] %}
-              <tr>
-                <td>{{ item[0] }}</td>
-                <td>{{ item[1] }}</td>
-              </tr>
-            {% endfor %}
-          </table>
-        </div>
-      {% endfor %}
-    </div>
-  </section>
-{% endif %}
+          </thead>
+          <tbody>
+            <!-- Welcome Event -->
+            <tr style="background-color: #6F96AE; color: white;">
+                <td>09:30-09:45</td>
+                <td colspan="2">Welcome</td>
+            </tr>
+
+            <!-- Speakers (Morning) -->
+            <tr>
+                <td>09:45-09:55</td>
+                <td>Vicky Kalogeiton (Polytechnique)</td>
+                <td>Multimodal generation</td>
+            </tr>
+            <tr>
+                <td>10:00-10:10</td>
+                <td>Enzo Tartaglione (Télécom Paris)</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>10:20-10:30</td>
+                <td>Gul Varol (ENPC)</td>
+                <td>3D human motion & language</td>
+            </tr>
+            <tr>
+                <td>10:35-10:45</td>
+                <td>David Filliat (ENSTA)</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>10:55-11:05</td>
+                <td>Renaud Market (ENPC)</td>
+                <td></td>
+            </tr>
+
+            <!-- Poster Session 1 -->
+            <tr style="background-color: #6F96AE; color: white;">
+                <td>11:05-12:00</td>
+                <td colspan="2">Poster Session 1</td>
+            </tr>
+
+            <!-- Lunch Break -->
+            <tr style="background-color: #6F96AE; color: white;">
+                <td>12:00-14:00</td>
+                <td colspan="2">Lunch Break</td>
+            </tr>
+
+            <!-- Speakers (Afternoon) -->
+            <tr>
+                <td>14:00-14:10</td>
+                <td>Gianni Franchi (ENSTA)</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>14:15-14:25</td>
+                <td>David Picard (ENPC)</td>
+                <td>🍏PoM: Efficient Image and Video Generation with the Polynomial Mixer</td>
+            </tr>
+            <tr>
+                <td>14:35-14:45</td>
+                <td>Titus Zaharia (Télécom SudParis)</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>14:50-15:00</td>
+                <td>Loic Landrieu (ENPC)</td>
+                <td>Towards a Universal Representation of Geospatial Data</td>
+            </tr>
+            <tr>
+                <td>15:10-15:20</td>
+                <td>Christophe Kervazo (Telecom Paris)</td>
+                <td>Interpretable and scalable deep learning methods for imaging inverse problems</td>
+            </tr>
+
+            <!-- Poster Session 2 -->
+            <tr style="background-color: #6F96AE; color: white;">
+                <td>15:30-17:00</td>
+                <td colspan="2">Poster Session 2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    {% endfor %}
+  </div>
 </section>
-{% if site.data.schedule %}
-  <section id="speaker_schedule">
-    <h1>Speaker Schedule</h1>
-    <h2>Morning</h2>
-    <div class="items-container">
-      {% for part in site.data.morning_speaker_schedule %}
-        <div class="item-large">
-          <table>
-            {% if part[0] != '' %}
-            <tr>
-              <th colspan="3">
-                <h2>{{ part[0] }}</h2>
-              </th>
-            </tr>
-            {% endif %}
-            <tr>
-              <th>Time</th>
-              <th>Name</th>
-              <th>Title</th>
-            </tr>
-            {% for item in part[1] %}
-            <tr>
-              {% for field in item %}
-                <td>{{ field }}</td>
-              {% endfor %}
-            </tr>
-            {% endfor %}
-          </table>
-        </div>
-      {% endfor %}
-    </div>
-    <h2>Afternoon</h2>
-    <div class="items-container">
-      {% for part in site.data.afternoon_speaker_schedule %}
-        <div class="item-large">
-          <table>
-            {% if part[0] != '' %}
-            <tr>
-              <th colspan="3">
-                <h2>{{ part[0] }}</h2>
-              </th>
-            </tr>
-            {% endif %}
-            <tr>
-              <th>Time</th>
-              <th>Name</th>
-              <th>Title</th>
-            </tr>
-            {% for item in part[1] %}
-            <tr>
-              {% for field in item %}
-                <td>{{ field }}</td>
-              {% endfor %}
-            </tr>
-            {% endfor %}
-          </table>
-        </div>
-      {% endfor %}
-    </div>
-  </section>
-{% endif %}
 <!--
 TODO re-add
 <section>
