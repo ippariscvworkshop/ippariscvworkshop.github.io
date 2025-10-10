@@ -11,15 +11,11 @@ group:
 
 # People organizing the event, and their websites.
 # See the ReadMe file for information on pictures.
-people:
-  - first: David
-    last: Picard
-    link: https://davidpicard.github.io
+people:  
+  - first: Arnak
+    last: Dalalyan
+    link: https://adalalyan.github.io/
 
-  - first: Enzo
-    last: Tartaglione
-    link: https://enzotarta.github.io
-  
   - first: Gianni
     last: Franchi
     link: https://giannifranchi.github.io
@@ -28,5 +24,14 @@ people:
     last: Kalogeiton
     link: http://vicky.kalogeiton.info
 
-  - first: Fanny
-    last: Sabatier
+  - first: Mihai
+    last: Mitrea
+    link: https://www.linkedin.com/in/mihai-mitrea-663a6247/?originalSubdomain=fr
+
+  - first: David
+    last: Picard
+    link: https://davidpicard.github.io
+
+  - first: Enzo
+    last: Tartaglione
+    link: https://enzotarta.github.io
