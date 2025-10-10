@@ -38,6 +38,11 @@ layout: compress
   <link rel="icon" type="image/png" href="images/favicon.png" sizes="16x16">
 </head>
 <body>
+  {% unless page.url contains 'archives' or page.url contains '2025_workshop' %}
+  <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+    <a href="/archives" style="background: {{ site.data.info.color }}; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-size: 0.9em; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">Previous Years</a>
+  </div>
+  {% endunless %}
   {{ content }}
 </body>
 </html>
