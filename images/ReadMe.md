@@ -1,0 +1,4 @@
+- `favicon.png` is the favicon, dimensions 16x16.
+- `test1.svg` is the logo on the home page. #TODO
+- `background.jpg` is the main background on the home page. Dimensions should be at least 1920x1080, but mind the file size!
+- `preview.png` is the preview for social media, dimensions 600x314. #TODO
