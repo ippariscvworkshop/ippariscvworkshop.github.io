@@ -3,12 +3,18 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 /* Background Gradient */
 .background-gradient {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.15), transparent 25%),
         radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.15), transparent 25%);
@@ -153,6 +159,18 @@
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 1.5rem;
+    padding: 0 1rem;
+    /* Prevent text touching edges */
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
 }
 
 .hero-date {
@@ -165,6 +183,24 @@
     display: flex;
     gap: 1rem;
     justify-content: center;
+    flex-wrap: wrap;
+    /* Allow wrapping on small screens */
+    padding: 0 1rem;
+    /* Ensure buttons don't touch edges */
+}
+
+@media (max-width: 480px) {
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    .hero-actions .btn-primary,
+    .hero-actions .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /* Footer */
@@ -179,6 +215,9 @@ footer {
 
 .footer-logo {
     height: 60px;
+    max-width: 700%;
+    /* Prevent overflow on small screens */
+    object-fit: contain;
     margin-bottom: 1.5rem;
     opacity: 0.8;
     transition: opacity 0.3s ease;
@@ -186,6 +225,14 @@ footer {
 
 .footer-logo:hover {
     opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .footer-logo {
+        height: auto;
+        width: 350px;
+        /* Reasonable default for mobile */
+    }
 }
 
 /* Sections */
