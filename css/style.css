@@ -189,6 +189,28 @@ body {
     /* Ensure buttons don't touch edges */
 }
 
+.hero-logos-container {
+    margin-top: 5rem;
+    /* Vertical space from buttons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.hero-logos {
+    height: 60px;
+    max-width: 100%;
+    object-fit: contain;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.hero-logos:hover {
+    opacity: 1;
+}
+
 @media (max-width: 480px) {
     .hero-actions {
         flex-direction: column;
@@ -200,6 +222,20 @@ body {
     .hero-actions .btn-secondary {
         width: 100%;
         text-align: center;
+    }
+
+    .hero-logos-container {
+        flex-direction: column;
+        /* Stack logos on mobile */
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .hero-logos {
+        height: auto;
+        max-height: 60px;
+        max-width: 200px;
+        /* Reasonable max width for mobile stacking */
     }
 }
 
@@ -233,6 +269,16 @@ footer {
         width: 350px;
         /* Reasonable default for mobile */
     }
+}
+
+.footer-logo-2 {
+    height: 100px;
+    max-width: 700%;
+    /* Prevent overflow on small screens */
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
 }
 
 /* Sections */
