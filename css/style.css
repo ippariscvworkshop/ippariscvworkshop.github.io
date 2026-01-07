@@ -329,16 +329,26 @@ footer {
 
 .schedule-item {
     display: flex;
+    align-items: flex-start;
     background: var(--bg-card);
     border: var(--glass-border);
     padding: 1.5rem;
     border-radius: 12px;
-    transition: transform 0.2s ease, background 0.2s ease;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    gap: 1.5rem;
 }
 
 .schedule-item:hover {
     transform: translateX(5px);
     background: var(--bg-card-hover);
+}
+
+.schedule-item.expandable {
+    cursor: pointer;
+}
+
+.schedule-item.expandable:hover {
+    border-color: var(--primary);
 }
 
 .schedule-item.highlight {
@@ -349,19 +359,61 @@ footer {
     font-family: var(--font-heading);
     font-weight: 600;
     color: var(--primary);
-    min-width: 150px;
+    min-width: 140px;
+}
+
+.schedule-item .event-info {
+    flex: 1;
 }
 
 .schedule-item .event {
     font-weight: 500;
     color: var(--text-main);
+    font-size: 1.1rem;
 }
 
-.schedule-item .detail {
+.schedule-item .event-details {
     color: var(--text-muted);
     font-weight: 400;
-    font-size: 0.9em;
-    margin-left: 0.5rem;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    display: none;
+    /* Hidden by default */
+    line-height: 1.4;
+}
+
+.schedule-item.active .event-details {
+    display: block;
+    /* Show when active */
+}
+
+.schedule-item .expand-icon {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    transition: transform 0.3s ease;
+    padding-top: 0.3rem;
+}
+
+.schedule-item.active .expand-icon {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+    .schedule-item {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .schedule-item .time {
+        min-width: unset;
+        font-size: 0.9rem;
+    }
+
+    .schedule-item .expand-icon {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
 }
 
 /* People Grid */
