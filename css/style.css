@@ -343,14 +343,6 @@ footer {
     background: var(--bg-card-hover);
 }
 
-.schedule-item.expandable {
-    cursor: pointer;
-}
-
-.schedule-item.expandable:hover {
-    border-color: var(--primary);
-}
-
 .schedule-item.highlight {
     border-left: 4px solid var(--secondary);
 }
@@ -377,25 +369,7 @@ footer {
     font-weight: 400;
     font-size: 0.95rem;
     margin-top: 0.5rem;
-    display: none;
-    /* Hidden by default */
     line-height: 1.4;
-}
-
-.schedule-item.active .event-details {
-    display: block;
-    /* Show when active */
-}
-
-.schedule-item .expand-icon {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    transition: transform 0.3s ease;
-    padding-top: 0.3rem;
-}
-
-.schedule-item.active .expand-icon {
-    transform: rotate(180deg);
 }
 
 @media (max-width: 768px) {
@@ -407,12 +381,6 @@ footer {
     .schedule-item .time {
         min-width: unset;
         font-size: 0.9rem;
-    }
-
-    .schedule-item .expand-icon {
-        position: absolute;
-        top: 1.5rem;
-        right: 1.5rem;
     }
 }
 

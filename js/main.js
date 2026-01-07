@@ -36,10 +36,3 @@ document.querySelectorAll('section, .glass-card, .person-card').forEach(el => {
     el.classList.add('fade-in');
     observer.observe(el);
 });
-
-// Schedule Expansion Logic
-document.querySelectorAll('.schedule-item.expandable').forEach(item => {
-    item.addEventListener('click', () => {
-        item.classList.toggle('active');
-    });
-});
