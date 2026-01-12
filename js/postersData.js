@@ -149,7 +149,7 @@ const postersSession1 = [
         "title": "Synthetic Abundance Maps for Unsupervised Super-Resolution of Hyperspectral Remote Sensing Images",
         "abstract": "Hyperspectral single image super-resolution (HS-SISR) aims to enhance the spatial resolution of hyperspectral images to fully exploit their spectral information. While considerable progress has been made in this field, most existing methods are supervised and require ground truth data for training—data that is often unavailable in practice. To overcome this limitation, we propose a novel unsupervised training framework for HS-SISR, based on synthetic abundance data. The approach begins by unmixing the hyperspectral image into endmembers and abundances. A neural network is then trained to perform abundance super-resolution using synthetic abundances only. These synthetic abundance maps are generated from a dead leaves model whose characteristics are inherited from the low-resolution image to be super-resolved. This trained network is subsequently used to enhance the spatial resolution of the original image’s abundances, and the final super-resolution hyperspectral image is reconstructed by combining them with the endmembers. Experimental results demonstrate both the training value of the synthetic data and the effectiveness of the proposed method across 3 datasets, 3 scaling factors, and several evaluation metrics.",
         "keywords": [
-            "Hyperspectral image; remote sensing; super-resolution; unsupervised learning; synthetic training data"
+            "Hyperspectral image", "remote sensing", "super-resolution", "unsupervised learning", "synthetic training data"
         ],
         "affiliation": "Télécom Paris",
         "presenter": "Xinxin XU"
@@ -298,7 +298,7 @@ const postersSession2 = [
         "title": "A geometric unification of concepts learning with concept cones",
         "abstract": "www.arxiv.org/abs/2512.07355",
         "keywords": [
-            "Explainable AI; Mechanistic Interpretability; Sparse Auto Encoders (SAE); Concept Bottleneck Models (CBM); Dictionnary Learning"
+            "Explainable AI", "Mechanistic Interpretability", "Sparse Auto Encoders (SAE)", "Concept Bottleneck Models (CBM)", "Dictionnary Learning"
         ],
         "affiliation": "ENSTA",
         "presenter": "Alexandre Rocchi--Henry"

@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        const fragment = document.createDocumentFragment();
         posters.forEach((poster, index) => {
             const card = document.createElement('div');
             card.className = 'poster-card glass-card';
@@ -30,8 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <button class="btn-secondary view-abstract" data-index="${index}">View Abstract</button>
             `;
-            posterGrid.appendChild(card);
+            fragment.appendChild(card);
         });
+        posterGrid.appendChild(fragment);
 
         // Add event listeners to buttons
         document.querySelectorAll('.view-abstract').forEach(btn => {
@@ -77,9 +79,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Search Logic
+    // Search Logic with Debounce
+    let searchTimeout;
     posterSearch.addEventListener('input', () => {
-        filterAndRender();
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+            filterAndRender();
+        }, 150); // small delay to make typing feel smoother
     });
 
     function filterAndRender() {

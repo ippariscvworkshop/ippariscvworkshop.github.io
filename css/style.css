@@ -35,6 +35,8 @@ body {
     z-index: 1000;
     display: flex;
     align-items: center;
+    transform: translateZ(0);
+    /* Hardware acceleration */
 }
 
 .nav-container {
@@ -306,6 +308,8 @@ footer {
     border-radius: 20px;
     padding: 3rem;
     box-shadow: var(--glass-shadow);
+    transform: translateZ(0);
+    /* Force GPU layer */
 }
 
 .glass-card p {
@@ -597,8 +601,14 @@ footer {
 .tab-btn.active {
     background: var(--primary-gradient);
     color: white;
-    border-color: transparent;
-    box-shadow: var(--shadow-glow);
+    border: 2px solid var(--primary);
+    box-shadow: 0 0 15px var(--primary-glow);
+    transform: translateY(-2px);
+    opacity: 1;
+}
+
+.tab-btn:not(.active) {
+    opacity: 0.7;
 }
 
 .poster-grid {
@@ -621,6 +631,12 @@ footer {
     justify-content: space-between;
     padding: 2rem;
     height: 100%;
+    min-width: 0;
+    /* Critical for grid item shrinking */
+    box-sizing: border-box;
+    content-visibility: auto;
+    /* Skip rendering cards while off-screen */
+    contain-intrinsic-size: 1px 350px;
 }
 
 .poster-title {
@@ -649,17 +665,34 @@ footer {
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 2rem;
+    width: 100%;
+    max-width: 100%;
 }
 
 .tag {
-    background: rgba(0, 242, 254, 0.1);
-    color: var(--primary);
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    border: 1px solid rgba(0, 242, 254, 0.2);
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    color: #60a5fa;
+    padding: 0.4rem 1.1rem;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    transition: background 0.2s ease, border-color 0.2s ease;
     white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
 }
+
+/*
+.tag:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: #60a5fa;
+    color: #ffffff;
+}
+*/
 
 /* Modal Styles */
 .modal {
@@ -736,40 +769,73 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .section-padding {
+        padding: 3rem 1rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
     .poster-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
+        /* Use 100% to ensure it fits viewport */
+        gap: 1.5rem;
+    }
+
+    .poster-card {
+        padding: 1.5rem;
+        width: 100%;
+    }
+
+    .poster-title {
+        font-size: 1.1rem;
     }
 
     .modal {
-        padding: 1rem;
+        padding: 0.5rem;
+        align-items: center;
     }
 
     .modal-content {
-        padding: 2rem 1.5rem !important;
+        max-height: 80vh;
+        width: 95%;
+        padding: 2rem 1.25rem !important;
+        margin: auto;
+        border-radius: 12px;
+    }
+
+    .modal-header h2 {
+        font-size: 1.25rem;
+        padding-right: 2rem;
     }
 }
 
-/* Styled Details Link in Schedule */
+/* Premium Details Link: Less "chunky", more "integrated" */
 .details-link {
-    display: inline-block;
-    padding: 0.2rem 0.8rem;
-    background: rgba(0, 242, 254, 0.1);
-    border: 1px solid rgba(0, 242, 254, 0.3);
-    border-radius: 20px;
-    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 1.2rem;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    color: #ffffff;
     font-size: 0.75rem;
     font-weight: 600;
     text-decoration: none;
-    margin-left: 0.5rem;
-    transition: all 0.3s ease;
+    margin-left: 0.7rem;
+    transition: all 0.4s ease;
     vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .details-link:hover {
-    background: var(--primary);
-    color: var(--bg-main);
-    box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
-    transform: translateY(-1px);
+    background: var(--gradient-main);
+    /* Full vibrance on hover */
+    border-color: transparent;
+    box-shadow: 0 0 20px var(--primary-glow);
+    transform: scale(1.05);
 }
 
 /* Staggered delays for grids if needed, but simple scroll trigger is often enough */
