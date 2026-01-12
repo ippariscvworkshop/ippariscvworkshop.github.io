@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Poster Catalog - Computer Vision Workshop at IP Paris - 2026">
+    <title>Posters - Computer Vision Workshop at IP Paris - 2026</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="background-gradient"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">CV Workshop <span class="highlight">2026</span></a>
+            <div class="nav-toggle" id="navToggle">
+                ☰
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html#about">About</a>
+                <a href="index.html#schedule">Schedule</a>
+                <a href="#" class="active">Posters</a>
+                <a href="index.html#organizers">Organizers</a>
+                <a href="archive.html" class="btn-primary">Previous Editions</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="section-padding">
+        <div class="container">
+            <div class="hero-content" style="text-align: center; margin-bottom: 4rem;">
+                <h1 class="gradient-text">Poster Catalog</h1>
+                <p class="hero-subtitle">Explore the research being presented at the workshop</p>
+            </div>
+
+            <!-- Search and Filter -->
+            <div class="glass-card" style="margin-bottom: 3rem; padding: 1.5rem;">
+                <div class="search-container">
+                    <input type="text" id="posterSearch" class="search-input"
+                        placeholder="Search by title, presenter, or keywords...">
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs-container">
+                <button class="tab-btn active" data-session="1">Poster Session #1</button>
+                <button class="tab-btn" data-session="2">Poster Session #2</button>
+            </div>
+
+            <!-- Poster Grid -->
+            <div id="posterGrid" class="poster-grid">
+                <!-- Posters will be injected here by JS -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Abstract Modal -->
+    <div id="abstractModal" class="modal">
+        <div class="modal-content glass-card">
+            <div class="modal-header">
+                <h2 id="modalTitle" class="gradient-text">Poster Title</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-meta">
+                    <p><strong>Presenter:</strong> <span id="modalPresenter"></span></p>
+                    <p><strong>Affiliation:</strong> <span id="modalAffiliation"></span></p>
+                </div>
+                <div id="modalKeywords" class="keyword-tags"></div>
+                <div class="modal-abstract">
+                    <h3>Abstract</h3>
+                    <p id="modalAbstractText">Abstract text goes here...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 IP Paris – Hi! PARIS Computer Vision Workshop.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/postersData.js"></script>
+    <script src="js/posters.js"></script>
+</body>
+
+</html>
