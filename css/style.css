@@ -288,6 +288,10 @@ footer {
     padding: 6rem 0;
 }
 
+.nav-offset {
+    padding-top: calc(var(--header-height) + 2rem);
+}
+
 .section-title {
     font-family: var(--font-heading);
     font-size: 2.5rem;
@@ -770,7 +774,11 @@ footer {
 
 @media (max-width: 768px) {
     .section-padding {
-        padding: 3rem 1rem;
+        padding: 4rem 1.5rem;
+    }
+
+    .nav-offset {
+        padding-top: calc(var(--header-height) + 3rem);
     }
 
     .container {
