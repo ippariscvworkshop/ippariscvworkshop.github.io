@@ -29,7 +29,7 @@ const postersSession1 = [
             "Computer-aided diagnosis",
             "Handwriting Analysis",
             "Deep Learning",
-            "Hybrid Transformer."
+            "Hybrid Transformer"
         ],
         "affiliation": "Télécom SudParis",
         "presenter": "Changqing Gong"
@@ -41,7 +41,7 @@ const postersSession1 = [
             "Diffusion",
             "Discrete diffusion"
         ],
-        "affiliation": "Ecole Polytechnique",
+        "affiliation": "École Polytechnique",
         "presenter": "Yuanzhi Zhu"
     },
     {
@@ -53,7 +53,7 @@ const postersSession1 = [
             "Generative Control",
             "Learning-Free"
         ],
-        "affiliation": "Ecole Polytechnique",
+        "affiliation": "École Polytechnique",
         "presenter": "Ye Zhu"
     },
     {
@@ -69,7 +69,7 @@ const postersSession1 = [
         "presenter": "Louis Geist"
     },
     {
-        "title": "Image generative models of watermarking. Case study: GAN models",
+        "title": "Image generative models watermarking. Case study: GAN models",
         "abstract": "AI-generated content (images, videos, audio, text, etc.) is expanding rapidly, driven by recent scientific breakthroughs and their integration into user-friendly applications. The resulting transformations affect multiple dimensions of daily life, ranging from the emergence of new business verticals to concerns about sovereignty, disinformation, and environmental impact. In this context, our work has three related yet complementary targets: (i) the watermarking of image generative models, (ii) the watermarking of the images thus generated, and (iii) the compliance of these solutions with multimedia compression standards. To this end, our study encompasses three main steps. First, a comprehensive testing procedure allowing for the objective benchmarking of state-of-the-art watermarking solutions has been designed and developed, thus identifying their main limitations, in terms of key-size, down-scaling with respect to the model size, and systematic visual impact in the generated images. Secondly, the study focuses on issues related to the deployment of high-quality generative AI models and advances an on/off image generation solution. This solution establishes synergies among state-of-the-art concepts to advance a new training scheme to enable the deployment of a GAN that can generate both vanilla (high-quality) samples and imperceptibly marked samples. The illustrations concern StyleGAN2-ADA trained on Celeb-A. The experimental results evaluate imperceptibility (in term of FID and SSIM) for both unmarked and marked samples, and robustness against compression neural-network–based attacks, and pixel-domain image modifications. Synergies with emerging ISO/IEC AWI 21617-3 Media asset watermarking standards are established. Our experimental results bring a new possibility for trustworthy AI deployment in edge–cloud settings, where storage capacity is a major challenge, by deploying on/off watermarked GEN-AI model.",
         "keywords": [
             "Watermarking",
@@ -77,7 +77,7 @@ const postersSession1 = [
             "GEN-AI"
         ],
         "affiliation": "Télécom SudParis",
-        "presenter": ""
+        "presenter": "Matéo Zoughebi"
     },
     {
         "title": "Feature-aware Hypergraph Generation via Next-Scale Prediction",
@@ -116,7 +116,7 @@ const postersSession1 = [
         "keywords": [
             "Out of Distribution",
             "Text to image",
-            "Visual language model."
+            "Visual language model"
         ],
         "affiliation": "ENSTA",
         "presenter": "Gianni Franchi"
@@ -130,7 +130,7 @@ const postersSession1 = [
             "dust3r",
             "3D"
         ],
-        "affiliation": "Ecole Polytechnique",
+        "affiliation": "École Polytechnique",
         "presenter": "Julien Gaubil"
     },
     {
@@ -140,7 +140,7 @@ const postersSession1 = [
             "privacy preservation",
             "neural network pruning",
             "structured sparsity",
-            "mutual information minimization."
+            "mutual information minimization"
         ],
         "affiliation": "Télécom Paris",
         "presenter": "Leonardo Magliolo"
@@ -163,7 +163,7 @@ const postersSession1 = [
             "Reward conditioned",
             "Alignement"
         ],
-        "affiliation": "Ecole Polytechnique",
+        "affiliation": "École Polytechnique",
         "presenter": "Lucas Degeorge - Arijit Ghosh"
     },
     {
@@ -186,7 +186,7 @@ const postersSession2 = [
         "keywords": [
             "Uncertainty quantification"
         ],
-        "affiliation": "Ecole Polytechnique",
+        "affiliation": "École Polytechnique",
         "presenter": "Joseph Hoche"
     },
     {
@@ -212,7 +212,7 @@ const postersSession2 = [
             "hand tracking"
         ],
         "affiliation": "Télécom SudParis",
-        "presenter": ""
+        "presenter": "Noé Constans"
     },
     {
         "title": "Specify and Edit: Overcoming Ambiguity in Text-Based Image Editing",
@@ -235,7 +235,7 @@ const postersSession2 = [
             "synthetic data",
             "multimodal conditioning"
         ],
-        "affiliation": "Ecole Polytechnique",
+        "affiliation": "École Polytechnique",
         "presenter": "Eleftherios Tsonis"
     },
     {
@@ -250,13 +250,13 @@ const postersSession2 = [
         "presenter": "Marwane Hariat"
     },
     {
-        "title": "Watermarking Large Language Models: from a buzzword to a cross- model solution",
+        "title": "Watermarking Large Language Models: from a buzzword to a cross-model solution",
         "abstract": "LLM (Large Language Models) have gradually evolved into general-purposefoundation models, and thanks to Vision Transformers (ViTs) they have a significantpotential role to play in multimodal application domains, such as image/videoprocessing. As domain specific LLMs are the result of substantial computational andfinancial costs, protecting such models against unauthorized use, theft, or modificationhas also become a critical concern, and watermarking is an appealing solution in thisrespect. While NN watermarking is already a complex research field, LLMs comeacross with additional constraints: while the watermark insertion should not require thecomplete training of the model, it should be compatible with strategies such asparameter-efficient fine-tuning (PEFT) or the addition of lightweight, trainable modules,while keeping the core model frozen.Started in June 2025, our study leverages on the equivariance properties of RotaryPositional Embeddings (RoPE) to design a watermarking mechanism for Transformer-based LLMs. RoPE encodes positional information through the multiplication of queryand key vectors by rotation matrices, inducing structured phase shifts within theattention mechanism. We thus inject a hidden signal (a watermark) at the input levelby applying non-uniform token displacements, which induces controlled, segment-wisephase shifts in the attention computation. As modifying/retraining the positionalencoding is not required, this method can be implemented with minimal fine-tuning.The experiments consider GPT-2, which is first adapted by replacing its absolutepositional embeddings with RoPE, then fine-tuned on a subset of the OpenWebTextdataset. Subsequently, the model is trained jointly with a lightweight decoder taskedwith extracting the watermark from the output logits. The experimental results can beconsidered as a preliminary proof of concepts: while the mark recovery from triggeredsamples is successful, the thorough evaluation of the imperceptibility property is on-going. Moreover, ablation studies show that detection not only depends on the non-uniform geometric transformation but also on semantic recognition of spacer tokens.On-going studies also relate to the synergies to be established between RoPE andVision Transformers and Swin Transformers.",
         "keywords": [
             "LLM VLM Watermarking"
         ],
         "affiliation": "Télécom SudParis",
-        "presenter": ""
+        "presenter": "Elliot Cole"
     },
     {
         "title": "Self-Supervised Multiview X-ray Matching",
@@ -281,7 +281,7 @@ const postersSession2 = [
             "Real-Time Inference"
         ],
         "affiliation": "ENSTA",
-        "presenter": "Calvin GALAGAIN"
+        "presenter": "Calvin Galagain"
     },
     {
         "title": "How far can we go with ImageNet for text-to-image generation?",
@@ -291,7 +291,7 @@ const postersSession2 = [
             "diffusion models",
             "ImageNet"
         ],
-        "affiliation": "Ecole Polytechnique",
+        "affiliation": "École Polytechnique",
         "presenter": "Lucas Degeorge"
     },
     {
@@ -304,7 +304,7 @@ const postersSession2 = [
         "presenter": "Alexandre Rocchi--Henry"
     },
     {
-        "title": "Multimodal embodiement-aware navigation transformer",
+        "title": "Multimodal embodiment-aware navigation transformer",
         "abstract": "Goal-conditioned navigation models for groundrobots trained using supervised learning show promising zero-shot transfer, but their collision-avoidance capability neverthelessdegrades under distribution shift, i.e. environmental, robot orsensor configuration changes. We propose a multi-modal, attention-based policy for goal navigation, trained onheterogeneous data from multiple platforms and environments,which improves robustness with two key features. First, we fuseRGB images, a goal embedding and arobot’s embodiment descriptor with a transformer architectureto capture complementary geometry and appearance cues. Thetransformer’s output is used to condition a diffusion modelthat generates navigable trajectories. Second, using automaticallygenerated offline labels, we train a collision prediction head forscoring and ranking trajectories produced by the diffusion model.The diffusion conditioning as well as the trajectory rankinghead depend on a robot’s embodiment token that allows ourmodel to generate and select trajectories with respect to therobot’s dimensions.",
         "keywords": [
             "Off-road navigation",
@@ -312,7 +312,7 @@ const postersSession2 = [
             "imitation learning"
         ],
         "affiliation": "ENSTA",
-        "presenter": ""
+        "presenter": "Louis Dezons"
     },
     {
         "title": "T-REGS: Minimum Spanning Tree Regularization for Self-Supervised Learning",
@@ -324,7 +324,7 @@ const postersSession2 = [
             "dimension estimation",
             "topological data analysis"
         ],
-        "affiliation": "Ecole Polytechnique",
+        "affiliation": "École Polytechnique",
         "presenter": "Julie Mordacq"
     },
     {
@@ -352,5 +352,14 @@ const postersSession2 = [
         ],
         "affiliation": "Télécom Paris",
         "presenter": "Gabriele Spadaro"
+    },
+    {
+        "title": "Controllable blind deblurring with diffusion models",
+        "abstract": "Blind deblurring aims to recover a clean image from a degraded measurement without knowledge of the degradation kernel. In practice, some high-frequency content can be completely lost; therefore, end-to-end methods that only learn to invert a degradation are often insufficient. This motivates the use of generative priors to synthesize plausible details conditioned on the degraded image. In this work, we propose a diffusion-based blind deblurring method and study two strategies for conditioning the diffusion backbone: with a ControlNet adapter and direct finetuning of the diffusion backbone. We find that the ControlNet-based model can be biased by the frozen diffusion backbone and is more prone to generating inconsistent content, while the fully finetuned backbone enforces better fidelity to the degraded image and achieves better perceptual results. In addition, we address the underexplored challenge of controllability by designing a blur measure that controls the model’s generation strength and provides explicit control over the fidelity/creativity trade-off, resulting in a controllable blind deblurring method.",
+        "keywords": [
+            "Blind deblurring", "Diffusion models", "Latent diffusion", "Conditional generation", "Controllable restoration"
+        ],
+        "affiliation": "Télécom Paris",
+        "presenter": "Imane Si Salah"
     }
 ];
