@@ -768,7 +768,7 @@ footer {
 
 .modal-abstract p {
     color: var(--text-main);
-    text-align: justify;
+    text-align: left;
     line-height: 1.5;
     font-size: 0.95rem;
 }
