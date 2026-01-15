@@ -292,7 +292,7 @@ const postersSession2 = [
             "ImageNet"
         ],
         "affiliation": "École Polytechnique",
-        "presenter": "Lucas Degeorge"
+        "presenter": "Lucas Degeorge - Arijit Ghosh"
     },
     {
         "title": "A geometric unification of concepts learning with concept cones",
