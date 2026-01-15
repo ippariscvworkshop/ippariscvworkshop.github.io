@@ -163,7 +163,7 @@ const postersSession1 = [
             "Reward conditioned",
             "Alignement"
         ],
-        "affiliation": "École Polytechnique",
+        "affiliation": "École Polytechnique - Ecole Nationale des Ponts et Chaussées",
         "presenter": "Lucas Degeorge - Arijit Ghosh"
     },
     {
@@ -291,7 +291,7 @@ const postersSession2 = [
             "diffusion models",
             "ImageNet"
         ],
-        "affiliation": "École Polytechnique",
+        "affiliation": "École Polytechnique - Ecole Nationale des Ponts et Chaussées",
         "presenter": "Lucas Degeorge - Arijit Ghosh"
     },
     {
