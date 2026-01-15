@@ -65,7 +65,7 @@ const postersSession1 = [
             "superpoint",
             "efficient"
         ],
-        "affiliation": "Ecole Nationale des Ponts et Chaussées",
+        "affiliation": "École Nationale des Ponts et Chaussées",
         "presenter": "Louis Geist"
     },
     {
@@ -97,7 +97,7 @@ const postersSession1 = [
             "Semantic Segmentation",
             "Earth Observation"
         ],
-        "affiliation": "Ecole Nationale des Ponts et Chaussées",
+        "affiliation": "École Nationale des Ponts et Chaussées",
         "presenter": "Yohann Perron"
     },
     {
@@ -107,7 +107,7 @@ const postersSession1 = [
             "video chaptering",
             "video understanding"
         ],
-        "affiliation": "Ecole Nationale des Ponts et Chaussées",
+        "affiliation": "École Nationale des Ponts et Chaussées",
         "presenter": "Lucas Ventura"
     },
     {
@@ -163,7 +163,7 @@ const postersSession1 = [
             "Reward conditioned",
             "Alignement"
         ],
-        "affiliation": "École Polytechnique - Ecole Nationale des Ponts et Chaussées",
+        "affiliation": "École Polytechnique - École Nationale des Ponts et Chaussées",
         "presenter": "Lucas Degeorge - Arijit Ghosh"
     },
     {
@@ -291,7 +291,7 @@ const postersSession2 = [
             "diffusion models",
             "ImageNet"
         ],
-        "affiliation": "École Polytechnique - Ecole Nationale des Ponts et Chaussées",
+        "affiliation": "École Polytechnique - École Nationale des Ponts et Chaussées",
         "presenter": "Lucas Degeorge - Arijit Ghosh"
     },
     {
